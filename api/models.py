@@ -15,18 +15,6 @@ class Container(models.Model):
     passwd_hash = models.CharField(max_length=128, null=True)
     status = models.IntegerField(default=0, null=False)
     timestamp = models.TimeField(auto_now=True, auto_now_add=False)
-    
-    #def update(self):
-    #    self.timestamp = models.TimeField(auto_now=True)
-    #    #self.save(update_fields=['timestamp'])
-    #    #self.save(force_update=True)
-    #    #self.save(update_fields=True)
-    #    self.save()
 
-    # This should not be needed
-    # def update(self):
-    #     print "models function"
-    #     container = self.container_id
-    #     container.save()
 
 
