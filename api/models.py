@@ -13,7 +13,7 @@ class Container(models.Model):
     container_id = models.CharField(max_length=128, unique=True, primary_key=True)
     ip_address = models.GenericIPAddressField(protocol='IPv4', unpack_ipv4=False)
     passwd_hash = models.CharField(max_length=128, null=True)
-    status = models.IntegerField(null=True)
+    status = models.IntegerField(default=0, null=False)
     timestamp = models.TimeField(auto_now=True, auto_now_add=False)
     
     #def update(self):
@@ -22,10 +22,11 @@ class Container(models.Model):
     #    #self.save(force_update=True)
     #    #self.save(update_fields=True)
     #    self.save()
-        
-    def update(self):
-        print "models function"
-        container = self.container_id
-        container.save()
+
+    # This should not be needed
+    # def update(self):
+    #     print "models function"
+    #     container = self.container_id
+    #     container.save()
 
 
