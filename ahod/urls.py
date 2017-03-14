@@ -9,13 +9,6 @@ router.register(r'container',
                 ContainerViewSet,
                 base_name='container'
                 )
-# router.register(r'register',
-#                 RegisterViewset,
-#                 base_name='container-detail')
-#
-# router.register(r'heartbeat',
-#                HeartbeatViewset,
-#                base_name='register-detail')
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

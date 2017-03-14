@@ -17,25 +17,4 @@ class ContainerViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     filter_fields = ('status', 'ip_address')
 
-## Original class
-# class RegisterViewset(viewsets.ModelViewSet):
-#
-#     """
-#     API endpoint for all endpoints
-#     """
-#     serializer_class = serializers.ContainerSerializer
-#     queryset = Container.objects.all()
-#     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-#
-#     #def perform_create(self, serializer):
-#     #    serializer.save()
-#
-#
-# class HeartbeatViewset(viewsets.ModelViewSet):
-#
-#     """
-#     API endpoint for endpoints with status =1
-#     """
-#     serializer_class = serializers.ContainerSerializer
-#     queryset = Container.objects.filter(status=1)
-#     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+
