@@ -1,0 +1,7 @@
+Operation:
+    urls.py --> views.py --> serializer.py --> models.py
+    
+Developement:
+    Project --> Application --> models.py --> serializer.py --> views.py --> urls.py
+    
+    
