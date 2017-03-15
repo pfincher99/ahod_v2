@@ -2,12 +2,16 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 from rest_framework.authtoken import views as restviews
-from api.views import ContainerViewSet
+from api.views import ContainerViewSet, PlcViewSet
 
 router = routers.DefaultRouter()
 router.register(r'container',
                 ContainerViewSet,
                 base_name='container'
+                )
+router.register(r'plc',
+                PlcViewSet,
+                base_name='plc'
                 )
 
 urlpatterns = [
