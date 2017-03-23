@@ -12,6 +12,7 @@ ADD . /ahod_v3
 WORKDIR /ahod_v3
 RUN pip install --requirement /ahod_v3/requirements.txt
 
-CMD ["python", "-m django --version"]
-CMD ["python", "manage.py runserver"]
+RUN python manage.py runserver
+
+## CMD ["python", "manage.py runserver"]
 
