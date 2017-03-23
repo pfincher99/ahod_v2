@@ -7,7 +7,7 @@ build:
         image: python:2-alpine
         commands:
             - pip install -r requirements.txt
-            - python manage.py test
+            ## - python manage.py test
 
 publish:
     docker:
@@ -40,6 +40,9 @@ deploy:
             - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server2/restart?force=true
         when:
             branch: "master"
+        commands:
+            - python manage.py test
+
 
     webhook:
         image: plugins/drone-webhook
