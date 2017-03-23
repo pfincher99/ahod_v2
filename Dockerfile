@@ -12,5 +12,5 @@ ADD . /ahod_v3
 WORKDIR /ahod_v3
 RUN pip install --requirement /ahod_v3/requirements.txt
 
-CMD ["python", "demoapp.py"]
+CMD ["python", "manage.py runserver 127.0.0.1:5001"]
 
