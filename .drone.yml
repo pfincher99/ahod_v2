@@ -36,7 +36,7 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server2/restart?force=true
         when:
             branch: "master"
 
@@ -48,6 +48,6 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server-dev/restart?force=true
+            - https://$$MANTL_CONTROL/marathon/v2/apps/imapex/ahod/ahod-server2-dev/restart?force=true
         when:
             branch: "dev"
