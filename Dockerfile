@@ -4,7 +4,7 @@
 ## Pull base image.
 FROM python:2-alpine
 MAINTAINER Hank Preston "hapresto@cisco.com"
-EXPOSE 5001
+EXPOSE 5000
 
 RUN pip install --no-cache-dir setuptools wheel
 
@@ -15,4 +15,4 @@ RUN pip install --requirement /ahod_v3/requirements.txt
 
 ## RUN python manage.py runserver
 
-CMD ["python", "manage.py", "runserver", "5001"]
+CMD ["python", "manage.py", "runserver", "5000"]
