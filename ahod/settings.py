@@ -25,7 +25,7 @@ SECRET_KEY = '1kbctf6e940=$!-stic%k#1ysb41iwr(w577!ep20#kt5^5!n0'
 DEBUG = False
 
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = [.cisco.com]
+ALLOWED_HOSTS = ['.cisco.com']
 
 # Application definition
 
