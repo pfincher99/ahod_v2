@@ -20,16 +20,15 @@ class ContainerViewSet(viewsets.ModelViewSet):
     """
     serializer_class = serializers.ContainerSerializer
     queryset = Container.objects.all()
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     permission_classes = (IsPostOrIsAuthenticated,)
     filter_fields = ('status', 'ip_address')
 
 class PlcViewSet(viewsets.ModelViewSet):
     """
-    API endpoint for all containers
+    API endpoint for all plcs
     """
     serializer_class = serializers.PlcSerializer
     queryset = Plc.objects.all()
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-    #filter_fields = ('info1', 'info2')
+    filter_fields = ('container_id','info1', 'info2')
 
